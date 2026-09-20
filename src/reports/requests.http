@@ -1,0 +1,25 @@
+### Create a new report
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+"price":12000,
+"make":"ford",
+"model":"mustang",
+"year":1982,
+"lng":76,
+"lat":76,
+"mileage":15000
+}
+
+### Approve an existing report
+PATCH http://localhost:3000/reports/5
+Content-Type: application/json
+
+{
+"approved":true
+}
+
+### Get an estimate for an existing vehicle
+GET http://localhost:3000/reports?make=toyota&model=land crouse1&lng=0&lat=0&mileage=20000&year=1980
+
