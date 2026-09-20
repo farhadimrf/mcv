@@ -22,7 +22,7 @@ export class User {
   // @Exclude()
   password: string;
 
-  @Column()
+  @Column({ default: false })
   isAdmin: boolean;
 
   @OneToMany(() => Report, (report) => report.user)
